@@ -26,7 +26,7 @@ const PriceCards = ({ isMonthly }) => {
         <div className="features">
           <p className="feature first">1 TB Storage</p>
           <p className="feature">5 Users Allowed</p>
-          <p className="feature">send up to 10 GB</p>
+          <p className="feature">Send up to 10 GB</p>
         </div>
         <div className="learn-btn">Learn More</div>
       </article>
