@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import PriceCards from "./PriceCards";
+import PriceToggle from "./PriceToggle";
+import { useState } from "react";
 
 function App() {
+  const [isMonthly, setIsMonthly] = useState(true);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+    <>
+      <main>
+        <PriceToggle setIsMonthly={setIsMonthly} isMonthly={isMonthly} />
+        <PriceCards isMonthly={isMonthly} setIsMonthly={setIsMonthly} />
+      </main>
+      <div class="attribution">
+        Challenge by{" "}
+        <a href="https://www.frontendmentor.io?ref=challenge">
+          Frontend Mentor
         </a>
-      </header>
-    </div>
+        . Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </>
   );
 }
 

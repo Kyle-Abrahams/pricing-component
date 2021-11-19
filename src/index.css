@@ -1,13 +1,171 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+:root {
+  --primary-gradient-from: hsl(236, 72%, 79%);
+  --primary-gradient-to: hsl(237, 63%, 64%);
+
+  --neutral-very-light-gray: hsl(240, 78%, 98%);
+  --neutral-light-gray: hsl(234, 14%, 74%);
+  --neutral-gray-blue: hsl(233, 13%, 49%);
+  --neutral-dark-gray: hsl(232, 13%, 33%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+main {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  background-color: var(--neutral-very-light-gray);
+  background: url(./images/bg-top.svg) right top no-repeat,
+    url(./images/bg-bottom.svg) left bottom no-repeat;
+  color: var(--neutral-gray-blue);
+}
+
+.toggle {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.toggle-heading {
+  font-size: 2em;
+  font-weight: 800;
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  margin-top: -1.5rem;
+}
+
+.toggle-container p {
+  color: var(--neutral-light-gray);
+}
+
+.toggle-btn {
+  background-image: linear-gradient(
+    to right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  width: 50px;
+  height: 30px;
+  border-radius: 50px;
+  margin: 0 1.5rem;
+  align-self: center;
+  cursor: pointer;
+}
+
+.toggle-btn:hover {
+  background-image: linear-gradient(
+    to right,
+    hsla(236, 72%, 79%, 0.651),
+    hsla(237, 63%, 64%, 0.568)
+  );
+}
+
+.toggle-btn .circle {
+  margin-top: 2px;
+  margin-left: 20px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: white;
+  transition: transform 0.3s;
+}
+
+.card {
+  width: 50%;
+  max-width: 400px;
+  margin: 0 auto 2rem auto;
+  text-align: center;
+  box-shadow: 0px 4px 3px rgba(59, 59, 59, 0.144);
+  border-radius: 10px;
+  background: white;
+  padding: 0.5rem 1rem 1.5rem 1rem;
+}
+
+.feature,
+.card-price {
+  border-bottom: 1px solid hsla(234, 14%, 74%, 0.678);
+}
+
+.card-price {
+  font-size: 3.5rem;
+  margin-top: -0.3rem;
+  padding-bottom: 3rem;
+}
+
+.card-price span {
+  font-size: 2rem;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+.features {
+  margin-top: -2rem;
+}
+
+.feature {
+  padding-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.learn-btn {
+  background-image: linear-gradient(
+    to right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  color: white;
+  padding: 0.7rem 0;
+  cursor: pointer;
+  border-width: 2px;
+  border-radius: 5px;
+}
+
+.learn-btn:hover {
+  color: hsl(237, 63%, 64%);
+  background: white;
+  background: linear-gradient(90deg, white, white) padding-box,
+    linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%)) border-box;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 2px;
+}
+
+.bold {
+  background-image: linear-gradient(
+    to right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  color: white;
+}
+
+.bold .feature,
+.card-price {
+  border-bottom: 1px solid white;
+}
+
+.bold .learn-btn {
+  background: white;
+  color: hsl(237, 63%, 64%);
+}
+
+.bold .learn-btn:hover {
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+}
+
+@media (min-width: 1200px) {
+  .cards-container {
+    display: flex;
+    max-width: 1500px;
+    margin: 0 auto;
+  }
 }
